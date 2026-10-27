@@ -1,7 +1,9 @@
+import java.util.Scanner;
 public class Chicles {
   public static void main(String[] args) {
+  Scanner tp = new Scanner(System.in);
     /*
-    Los datos que necesitaremos regitrar, en el progrma serán:
+    Los datos que necesitaremos regitrar, en el programa serán:
     Los de entrada:
     - Número de envoltorios necesarios para cumplir la oferta (integer)
     - Número de chicles que se regalan al cumplir la condición para recibir la oferta. (integer)
@@ -11,7 +13,7 @@ public class Chicles {
     - Número de chicles que comemos ( la suma de lo que compramos y obtenemos al recibir chicles adicionales) (integer)
     - Número de envoltorio finales (integer)
 
-    Para que ls oferta se arruines únicamente se debe cumplir que:
+    Para que la oferta se arruine, únicamente se debe cumplir que:
 
     La cantidad de envoltorio necesarios para cumplir la oferta sea menor que la cantidad de chicles que te dan al
     cumplir esa condición de oferta
@@ -35,10 +37,9 @@ public class Chicles {
     Salida
     31
     RUINA
-
-
      */
-
+    System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
+        "chicles que te dan al cumplir el núemro de envoltorios, y por último el número de chicles que vas a comprar");
 
   }
 }
