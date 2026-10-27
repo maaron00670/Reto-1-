@@ -2,12 +2,12 @@ public class Rico {
   public static void main(String[] args) {
     /*
     Datos que sabemos:
-    Los compartimentos estan escalonados, es decir que Uno es mas pequeño que el otro.
+    Los compartimentos están escalonados, es decir que uno es más pequeño que el otro.
     Datos de entrada:
     - Número de pruebas (integer)
-      - Son 3 datos: (en la misma linea se introducen
+      - Son 3 datos: (en la misma línea se introducen
          · Numero de Compartimentos/Acuarios (integer)
-         · Numero de Litros que tiene el Compartimento/Acuario mas grande (double/float)
+         · Numero de Litros que tiene el Compartimento/Acuario más grande (double/float)
          · La diferencia de litros entre los Compartimentos/Acuarios (integer/double)
     Datos de salida
     - Número de Litors que tiene que comprar cada prueba (double)
