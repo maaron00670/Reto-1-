@@ -12,5 +12,6 @@ public class Descendente {
     Salida:
     El resultado de cada prueba (integer)
      */
+    System.out.println("Dame un numero entero");
   }
 }

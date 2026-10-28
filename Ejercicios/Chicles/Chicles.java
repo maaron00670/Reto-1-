@@ -46,14 +46,14 @@ public class Chicles {
       int num_envoltorios_necesarios = sc.nextInt();
       int num_chicles_oferta = sc.nextInt();
       int num_chicles_comprados = sc.nextInt();
-      if(num_envoltorios_necesarios<=num_chicles_oferta){
+      if (num_chicles_comprados == 0 && num_chicles_oferta == 0 && num_envoltorios == 0) {
+        break; //No se si esto funciona, osea no se si es como el swtch y sus casos que si pones eso se cierra el bucle
+      }if(num_envoltorios_necesarios<=num_chicles_oferta){
        System.out.println("Ruina");
-      }
-      else{
+      } else{
         int numero_envoltorio_tengo = num_chicles_comprados;
         int total_chicles_comidos = num_chicles_comprados;
         int chicles_obtenidos = 0; // Los chiles que obtengo gracias a la oferta
-
         while (numero_envoltorio_tengo>=num_envoltorios_necesarios) {  //aqui aplicamos la operacion nc= env_teng/envol_nec chicles que obtengo
         }
       }

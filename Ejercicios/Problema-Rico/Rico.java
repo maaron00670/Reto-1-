@@ -36,6 +36,7 @@ public class Rico {
       long num_acuarios/compartimentos = sc.nextInt();
       long litros_mayor = sc.nextInt();
       long diferencia_litros = sc.nextInt();
+
     }
   }
 }
