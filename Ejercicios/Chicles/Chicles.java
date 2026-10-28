@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Chicles {
   public static void main(String[] args) {
-  Scanner tp = new Scanner(System.in);
+    Scanner sc = new Scanner(System.in);
     /*
     Los datos que necesitaremos regitrar, en el programa serán:
     Los de entrada:
@@ -38,8 +38,25 @@ public class Chicles {
     31
     RUINA
      */
-    System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
-        "chicles que te dan al cumplir el núemro de envoltorios, y por último el número de chicles que vas a comprar");
 
+
+    while (num_chicles_comprados !== 0 && num_chicles_oferta !== 0 && num_envoltorios !== 0) {
+      System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
+          "chicles que te dan al cumplir el núemro de envoltorios, y por último el número de chicles que vas a comprar");
+      int num_envoltorios_necesarios = sc.nextInt();
+      int num_chicles_oferta = sc.nextInt();
+      int num_chicles_comprados = sc.nextInt();
+      if(num_envoltorios_necesarios<=num_chicles_oferta){
+       System.out.println("Ruina");
+      }
+      else{
+        int numero_envoltorio_tengo = num_chicles_comprados;
+        int total_chicles_comidos = num_chicles_comprados;
+        int chicles_obtenidos = 0; // Los chiles que obtengo gracias a la oferta
+
+        while (numero_envoltorio_tengo>=num_envoltorios_necesarios) {  //aqui aplicamos la operacion nc= env_teng/envol_nec chicles que obtengo
+        }
+      }
+    }
   }
 }

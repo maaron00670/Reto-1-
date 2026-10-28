@@ -1,5 +1,7 @@
+import java.util.Scanner;
 public class Rico {
   public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
     /*
     Datos que sabemos:
     Los compartimentos están escalonados, es decir que uno es más pequeño que el otro.
@@ -25,6 +27,15 @@ public class Rico {
     300
      */
 
-
+    System.out.println("Dime el número de casos que quiere realizar");
+    int casos = sc.nextInt();
+    for (int i = 0; i < casos ; i++){
+      System.out.println("Caso número" + (i+1) + ":");
+      System.out.println("Dime el número de acuarios/compartimentos, los litros que tiene el acuario7compartimento" +
+          " mas grande y la diferencia de litros quetiene los acuarios/compartimentos");
+      long num_acuarios/compartimentos = sc.nextInt();
+      long litros_mayor = sc.nextInt();
+      long diferencia_litros = sc.nextInt();
+    }
   }
 }
