@@ -33,7 +33,7 @@ $$
 
 El resultado es = ruina.
 
-En el código, se usará un `switch` para cada caso que haya puesto y en cada caso se usará el `while` como condición base inicial, para identificar si es un caso ruina o no, es decir, si el número que ha indicado de envoltorios necesarios es menor que la recompensa se mostrará la palabra "ruina". Si la condición no se cumple, y es el caso contrario, ya se calculará y al final de cada caso no se pondrá `switch` (o `break`) ya que queremos que pase por todos los casos.
+Para ello se usará...
 
 ## Segundo Ejercicio
 
@@ -45,7 +45,7 @@ $$
 ABCD + BCD + CD + D
 $$
 
-Usaremos ...
+Para ello se usara...
 
 ## Tercer Ejercicio
 
@@ -61,4 +61,4 @@ $$
 - **C**: cantidad total del acuario máximo
 - **D**: Diferencia de litros
 
-Usaremos...
+Para ello se usará...
