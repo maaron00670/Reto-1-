@@ -1,79 +1,61 @@
 import java.util.Scanner;
+
 public class Chicles {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-/*
-    Los datos que necesitaremos regitrar, en el programa serán:
-    Los de entrada:
-    - Número de envoltorios necesarios para cumplir la oferta (integer)
-    - Número de chicles que se regalan al cumplir la condición para recibir la oferta. (integer)
-    - Número de chicles que comprar inicialmente (Es el número de envoltorios que tendrá el usuario) (integer)
+        /*
+            Los datos que necesitaremos registrar, en el programa serán:
+            Los de entrada:
+        - Número de envoltorios necesarios para cumplir la oferta (integer)
+        - Número de chicles que se regalan al cumplir la condición para recibir la oferta. (integer)
+        - Número de chicles que comprar inicialmente (Es el número de envoltorios que tendrá el usuario) (integer)
 
-    Los de salidad:
-    - Número de chicles que comemos ( la suma de lo que compramos y obtenemos al recibir chicles adicionales) (integer)
-    - Número de envoltorio finales (integer)
+            Los de salida:
+        - Número de chicles que comemos (la suma de lo que compramos y obtenemos al recibir chicles adicionales) (integer)
+        - Número de envoltorios finales (integer)
 
-    Para que la oferta se arruine, únicamente se debe cumplir que:
-
-    La cantidad de envoltorio necesarios para cumplir la oferta sea menor que la cantidad de chicles que te dan al
-    cumplir esa condición de oferta
-
-    Ejemplo:
-
-    2 envoltorio te den 5  -> compro 2 chicles -> medan 1 - tengo 7 chicles en total -> 7/2 = 1 y resto 1 (pierdo) ruina
-
-    Ejemplo
-
-    5 envoltorio -> 1
-    compro 25 chicles -> me dan 5 chicles
-    De eso cinco chicle que me han dado, me dan uno más
-    Entonces 25 de lo que me compro, + 5 que me dan el la primera , y 1 en la segunda da un total de 31 chicles
-
-    Entrada
-    5 1 25
-    2 5 2
-    0 0 0 //para que acabe ya las pruebas lo tres números deben ser 0  (el usuario puede poner cuantas pruebas quiera)
-
-    Salida
-    31
-    RUINA
-     */
+            Para que la oferta se arruine, únicamente se debe cumplir que:
+            La cantidad de envoltorio necesarios para cumplir la oferta sea menor o igual que la cantidad de chicles que te dan.
+         */
 
         System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
-                "chicles que te dan al cumplir el núemro de envoltorios, y por último el número de chicles que vas a comprar");
+                "chicles que te dan al cumplir el número de envoltorios, y por último el número de chicles que vas a comprar:");
 
-        int num_envoltorios_necesarios ;
-        int num_chicles_oferta  ;
-        int num_chicles_comprados ;
-
-
+        int num_envoltorios_necesarios;
+        int num_chicles_oferta;
+        int num_chicles_comprados;
 
         do {
+            num_envoltorios_necesarios = sc.nextInt();
+            num_chicles_oferta = sc.nextInt();
+            num_chicles_comprados = sc.nextInt();
 
-                num_envoltorios_necesarios = sc.nextInt();
-                num_chicles_oferta = sc.nextInt();
-                num_chicles_comprados = sc.nextInt();
+            // Evitamos procesar si los tres son 0 en esta iteración
+            if (num_envoltorios_necesarios != 0 || num_chicles_oferta != 0 || num_chicles_comprados != 0) {
 
+                // Comprobamos la condición de RUINA
+                if (num_chicles_oferta >= num_envoltorios_necesarios && num_chicles_comprados >= num_envoltorios_necesarios) {
+                    System.out.println("RUINA");
+                } else {
+                    int total_chicles_comidos = num_chicles_comprados;
+                    int numero_envoltorio_tengo = num_chicles_comprados;
 
-                int numero_envoltorio_tengo = num_chicles_comprados;
-                int total_chicles_comidos = num_chicles_comprados;
-                int chicles_obtenidos_totales = 0; // Los chiles que obtengo gracias a la oferta
-                int chicles_obtenidos = 0;
-                int chicles_quedan;
+                    // Lógica para calcular los chicles obtenidos y los envoltorios restantes
+                    while (numero_envoltorio_tengo >= num_envoltorios_necesarios) {
+                        int grupos = numero_envoltorio_tengo / num_envoltorios_necesarios;
+                        int chicles_nuevos = grupos * num_chicles_oferta;
 
-                while (numero_envoltorio_tengo >= num_envoltorios_necesarios && chicles_obtenidos > num_envoltorios_necesarios) {  //aqui aplicamos la operacion nc= env_teng/envol_nec chicles que obtengo
-                    chicles_obtenidos = numero_envoltorio_tengo / num_envoltorios_necesarios;
-                    chicles_obtenidos_totales += chicles_obtenidos;
+                        total_chicles_comidos += chicles_nuevos;
+                        numero_envoltorio_tengo = (numero_envoltorio_tengo % num_envoltorios_necesarios) + chicles_nuevos;
+                    }
 
+                    // Imprimimos el total de chicles comidos y los envoltorios sobrantes separados por espacio
+                    System.out.println(total_chicles_comidos + " " + numero_envoltorio_tengo);
                 }
-                System.out.println(chicles_obtenidos_totales);
-                System.out.println(chicles_obtenidos);
-
-
+            }
 
         } while (num_envoltorios_necesarios != 0 && num_chicles_oferta != 0 && num_chicles_comprados != 0);
+
         System.out.println("Apagando ...");
-
-
     }
 }
