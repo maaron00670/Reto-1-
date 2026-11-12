@@ -39,35 +39,41 @@ public class Chicles {
     RUINA
      */
 
-        int num_envoltorios_necesarios;
-        int num_chicles_oferta;
-        int num_chicles_comprados;
+        System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
+                "chicles que te dan al cumplir el núemro de envoltorios, y por último el número de chicles que vas a comprar");
+
+        int num_envoltorios_necesarios ;
+        int num_chicles_oferta  ;
+        int num_chicles_comprados ;
 
 
-        do{
-            System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
-                    "chicles que te dan al cumplir el núemro de envoltorios, y por último el número de chicles que vas a comprar");
 
-            num_envoltorios_necesarios = sc.nextInt();
-            num_chicles_oferta = sc.nextInt();
-            num_chicles_comprados = sc.nextInt();
+        do {
 
-            int numero_envoltorio_tengo = num_chicles_comprados;
-            int total_chicles_comidos = num_chicles_comprados;
-            int chicles_obtenidos_totales = 0; // Los chiles que obtengo gracias a la oferta
-            int chicles_obtenidos = 0;
-            int chicles_quedan;
-            while (numero_envoltorio_tengo>=num_envoltorios_necesarios && chicles_obtenidos>num_envoltorios_necesarios) {  //aqui aplicamos la operacion nc= env_teng/envol_nec chicles que obtengo
-                chicles_obtenidos = numero_envoltorio_tengo/num_envoltorios_necesarios;
-                chicles_obtenidos_totales+=chicles_obtenidos;
+                num_envoltorios_necesarios = sc.nextInt();
+                num_chicles_oferta = sc.nextInt();
+                num_chicles_comprados = sc.nextInt();
 
-            }
-            System.out.println(chicles_obtenidos_totales);
-            System.out.println(chicles_obtenidos);
 
-        } while (num_envoltorios_necesarios>=num_chicles_oferta || num_envoltorios_necesarios < num_chicles_comprados);
+                int numero_envoltorio_tengo = num_chicles_comprados;
+                int total_chicles_comidos = num_chicles_comprados;
+                int chicles_obtenidos_totales = 0; // Los chiles que obtengo gracias a la oferta
+                int chicles_obtenidos = 0;
+                int chicles_quedan;
+
+                while (numero_envoltorio_tengo >= num_envoltorios_necesarios && chicles_obtenidos > num_envoltorios_necesarios) {  //aqui aplicamos la operacion nc= env_teng/envol_nec chicles que obtengo
+                    chicles_obtenidos = numero_envoltorio_tengo / num_envoltorios_necesarios;
+                    chicles_obtenidos_totales += chicles_obtenidos;
+
+                }
+                System.out.println(chicles_obtenidos_totales);
+                System.out.println(chicles_obtenidos);
+
+
+
+        } while (num_envoltorios_necesarios != 0 && num_chicles_oferta != 0 && num_chicles_comprados != 0);
+        System.out.println("Apagando ...");
 
 
     }
 }
-
