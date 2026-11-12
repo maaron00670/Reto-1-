@@ -42,8 +42,7 @@ public class Chicles {
         int num_envoltorios_necesarios;
         int num_chicles_oferta;
         int num_chicles_comprados;
-        String resultado_1 = "";
-        String resultado_2 = "";
+
 
         do{
             System.out.println("Dime el número de envoltorios que se necesita para que te den los chicles; El número de " +
@@ -63,10 +62,11 @@ public class Chicles {
                 chicles_obtenidos_totales+=chicles_obtenidos;
 
             }
+            System.out.println(chicles_obtenidos_totales);
             System.out.println(chicles_obtenidos);
-            System.out.println(resultado_2);
 
         } while (num_envoltorios_necesarios>=num_chicles_oferta || num_envoltorios_necesarios < num_chicles_comprados);
+
 
     }
 }
