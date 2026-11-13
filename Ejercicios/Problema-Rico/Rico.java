@@ -27,15 +27,31 @@ public class Rico {
     300
      */
 
-    System.out.println("Dime el número de casos que quiere realizar");
+    /* COMENTARIOS MAZE - temporales
+
+    Se tiene que tener en cuenta que el contenedor mas grande de la fila es EL PRIMERO
+    Ningun numero puede ser mayor a 10000 NI >0
+     */
+
+    System.out.println("Dime el número de casos a realizar");
     int casos = sc.nextInt();
     for (int i = 0; i < casos ; i++){
-      System.out.println("Caso número" + (i+1) + ":");
-      System.out.println("Dime el número de acuarios/compartimentos, los litros que tiene el acuario7compartimento" +
-          " mas grande y la diferencia de litros quetiene los acuarios/compartimentos");
-      long num_acuarios/compartimentos = sc.nextInt();
-      long litros_mayor = sc.nextInt();
-      long diferencia_litros = sc.nextInt();
+      System.out.println("Caso " + (i+1) + ":");
+      System.out.println("Dime el numero de compartimentos del acuario");
+      int numAcuarios = sc.nextInt();
+      System.out.println("Dime el la capazidad del litros del mas grande");
+      int litros = sc.nextInt();
+      System.out.println("Dime la diferencia de litros entre compartimientos adyacentes");
+      int difLitros = sc.nextInt();
+      int CantidadLitrosFila = 0;
+      int sumaContenedor = 0;
+      for (int c = 0; c < numAcuarios ; c++){
+        int contenedor = litros - (difLitros * c);
+        sumaContenedor = sumaContenedor + contenedor;
+        CantidadLitrosFila = sumaContenedor;
+      }
+
+      System.out.println("en esta fila necesita " + CantidadLitrosFila);
 
     }
   }
