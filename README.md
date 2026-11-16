@@ -33,7 +33,7 @@ $$
 
 El resultado es = ruina.
 
-Para ello se usará...
+
 
 ## Segundo Ejercicio
 
@@ -45,7 +45,7 @@ $$
 ABCD + BCD + CD + D
 $$
 
-Para ello se usara...
+
 
 ## Tercer Ejercicio
 
@@ -61,4 +61,4 @@ $$
 - **C**: cantidad total del acuario máximo
 - **D**: Diferencia de litros
 
-Para ello se usará...
+
